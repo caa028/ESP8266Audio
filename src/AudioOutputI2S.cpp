@@ -352,7 +352,7 @@ bool AudioOutputI2S::stop()
     i2s_zero_dma_buffer((i2s_port_t)portNo);
   #elif defined(ARDUINO_ARCH_RP2040)
     I2S.end();
+    i2sOn = false;
   #endif
-  i2sOn = false;
   return true;
 }
